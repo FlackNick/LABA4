@@ -20,9 +20,9 @@ function DO(){
     name=$(cat ~/.trash/.key)
     let "name=$name + 1"
     echo $name > ~/.trash/.key
-    ln $1 ~/.trash/$name
+    ln $1 ~/.trash/$name 
     rm $1
     echo "$(pwd)/$1 $name" >> ~/.trash.log
 }
 
-DO
+DO $1
